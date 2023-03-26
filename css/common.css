@@ -31,5 +31,6 @@ button {
 
 .gallery li img {
   height: 500px;
+  /* width: 50%; */
   flex-basis: 20%;
 }
