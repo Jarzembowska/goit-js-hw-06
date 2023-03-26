@@ -19,26 +19,27 @@ let height = 30;
 
 createBtn.onclick = () => {
   // console.log(input.value);
-  if ((input.value, 101)) {
-    let newElem = document.createElement('div');
+  if (input.value < 101) {
+    for (let i = 0; i < input.value; i += 1) {
+      let newElem = document.createElement('div');
 
-    if (input.value < 101) {
-      for (let i = 0; i < input.value; i += 1) {
-        let newElem = document.createElement('div');
-
-        newElem.setAttribute(
-          'style',
-          'height: ' + height + 'px' + '',
-          'width: ' + width + 'px' + '',
-          'background-color: ' + getRandomHexColor()
-        );
-        boxes.append(newElem);
-        width = width + 10;
-        height = height + 10;
-      }
-      console.log(boxes.childNodes);
-    } else alert('Wprowadz poprawna wartosc od 1 do 100');
-  }
+      newElem.setAttribute(
+        'style',
+        'height:' +
+          height +
+          'px' +
+          '; width:' +
+          width +
+          'px ' +
+          ' ;background-color: ' +
+          getRandomHexColor()
+      );
+      boxes.append(newElem);
+      width = width + 10;
+      height = height + 10;
+    }
+    console.log(boxes.childNodes);
+  } else alert('Wprowadz poprawna wartosc od 1 do 100');
 };
 const boxes = document.getElementById('boxes');
 
