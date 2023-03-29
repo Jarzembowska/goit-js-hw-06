@@ -20,8 +20,8 @@ function createBoxes(quantity) {
     const box = document.createElement('div');
 
     //Ustawiamy style div (box) - wysokość i szerokość
-    box.style.width = 30 + i * 10 + 'px';
-    box.style.height = 30 + i * 10 + 'px';
+    box.style.width = `${30 + counter * 10}px`;
+    box.style.height = `${30 + counter * 10}px`;
 
     // ustawiamy w stylach zmienną dla background (tła) getRandomHexColor
     box.style.background = getRandomHexColor();
@@ -29,6 +29,7 @@ function createBoxes(quantity) {
 
     // po każdym przejściu pętli wypychamy utworzony box do tablicy boxes
     boxes.push(box);
+    counter++;
   }
 
   //zwracamy tablicę utworzonych boxów ('div')
